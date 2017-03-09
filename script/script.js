@@ -2,6 +2,9 @@
 // https://bost.ocks.org/mike/sankey/ 
 // http://bl.ocks.org/git-ashish/8959771
 
+/*  global d3 
+    global $
+*/
 var units = "GWh";
 
 var year=2014;
@@ -52,10 +55,10 @@ var render = function(year){
         .links(graph.links)
         .layout(32);
 
-  // add in the links
+    // add in the links
     var link = svg.append("g").selectAll(".link")
         .data(graph.links)
-      .enter().append("path")
+        .enter().append("path")
         .attr("class", "link")
         .attr("d", path)
         .attr("id", function(d,i){d.id = i; return "link-"+i;}) // enables the click-event for highlighting
@@ -67,17 +70,10 @@ var render = function(year){
         .on("mouseout", mouseout)
         ;
 
-  // add the link titles
-  /*
-  link.append("title")
-    .text(function(d) {
-      return d.source.name + ": " + format(d.value); 
-    });
-  */
 
-  // add in the nodes
+    // add in the nodes
     var node = svg.append("g").selectAll(".node")
-        .data(graph.nodes)
+      .data(graph.nodes)
       .enter().append("g")
         .attr("class", "node")
         .attr("transform", function(d) { 
@@ -85,24 +81,19 @@ var render = function(year){
         .on("click",highlight_node_links) // enables the click-event for highlighting
       .call(d3.behavior.drag()
         .origin(function(d) { return d; })
-        );
+      );
 
     // add the rectangles for the nodes
-      node.append("rect")
-          .attr("height", function(d) { return d.dy; })
-          .attr("width", sankey.nodeWidth())
-          .style("fill", function(d) { return d.color;}) // modified node color
-          .on("mouseover", mouseover)
-          .on("mousemove", function(d){mousemove(d)})
-          .on("mouseout", mouseout)
-          //.style("stroke", function(d) { 
-          //  return d3.rgb(d.color).darker(0); }) // .darker(2) to show lines for rectangles
-          //.append("title")
-          //.text(function(d) { 
-          //  return d.name + ": " + format(d.value); })
-            ;
+    node.append("rect")
+      .attr("height", function(d) { return d.dy; })
+      .attr("width", sankey.nodeWidth())
+      .style("fill", function(d) { return d.color;}) // modified node color
+      .on("mouseover", mouseover)
+      .on("mousemove", function(d){mousemove(d)})
+      .on("mouseout", mouseout)
+      ;
 
-  // add in the title for the nodes
+    // add in the title for the nodes
     node.append("text")
         .attr("x", -6)
         .attr("y", function(d) { return d.dy / 2; })
@@ -115,9 +106,8 @@ var render = function(year){
         .attr("text-anchor", "start");
 
 
-  // Highlight
+    // Highlight
     function highlight_node_links(node,i){
-
       var remainingNodes=[],
           nextNodes=[];
 
@@ -125,7 +115,7 @@ var render = function(year){
       if( d3.select(this).attr("data-clicked") == "1" ){
         d3.select(this).attr("data-clicked","0");
         stroke_opacity = null;
-      }else{
+      } else{
         d3.select(this).attr("data-clicked","1");
         stroke_opacity = 0.9;
       }
@@ -157,41 +147,41 @@ var render = function(year){
       });
     }
 
+
     function highlight_link(id,opacity){
         d3.select("#link-"+id).style("stroke-opacity", opacity);
     }
     
     
-      // tooltips
-  var div = d3.select("body").append("div")
-			.attr("class", "tooltip")
-			.style("display", "none")
-			;
-			
-  function mouseover() {
-		div.style("display", "inline");
-	}
-	
-	function mousemove(d) {
-		div
-				.html("<strong>" + (d['name'] || d['source']['name']) + ": " + format(d.value) + "</strong>")
-				.style("left", (d3.event.pageX - 50) + "px")
-				.style("top", (d3.event.pageY - 11) + "px");
-	}
-	
-	function mouseout() {
-		div.style("display", "none");
-	}
+    // tooltips
+    var div = d3.select("body").append("div")
+  			.attr("class", "tooltip")
+  			.style("display", "none")
+  			;
+  			
+    function mouseover() {
+  		div.style("display", "inline");
+  	}
+  	
+  	function mousemove(d) {
+  		div
+  				.html("<strong>" + (d['name'] || d['source']['name']) + ": " + format(d.value) + "</strong>")
+  				.style("left", (d3.event.pageX - 50) + "px")
+  				.style("top", (d3.event.pageY - 11) + "px");
+  	}
+  	
+  	function mouseout() {
+  		div.style("display", "none");
+  	}
 
-
-  })
+  });
 };
 
 var changeTitle = function(year){
   var title=$("h2").text();
   var newTitle = title.substr(0, title.length - 4) + year;
   $("h2").html(newTitle);
-}
+};
 
 
 $('input:radio[name="year"]').change(function (event) {
