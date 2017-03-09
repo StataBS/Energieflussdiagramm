@@ -79,9 +79,7 @@ var render = function(year){
         .attr("transform", function(d) { 
         return "translate(" + d.x + "," + d.y + ")"; })
         .on("click",highlight_node_links) // enables the click-event for highlighting
-      .call(d3.behavior.drag()
-        .origin(function(d) { return d; })
-      );
+        ;
 
     // add the rectangles for the nodes
     node.append("rect")
@@ -101,7 +99,7 @@ var render = function(year){
         .attr("text-anchor", "end")
         .attr("transform", null)
         .text(function(d) { return d.name; })
-      .filter(function(d) { return d.x < width / 2; })
+        .filter(function(d) { return d.x < width / 2; })
         .attr("x", 6 + sankey.nodeWidth())
         .attr("text-anchor", "start");
 
