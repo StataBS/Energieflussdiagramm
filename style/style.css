@@ -1,16 +1,18 @@
 body {
   font-family: Arial;
-  font-size: 12px;
+  font-size: 10px;
 }
 
-.chart {
+text, .chart {
   font-weight: bold;
+  font-size: 10px;
 }
 
 .node rect {
-  cursor: move;
+  /*cursor: move;*/
   fill-opacity: .9;
-  shape-rendering: crispEdges;
+  stroke-width: 0px;
+  /*shape-rendering: crispEdges;*/
 }
 
 .node text {

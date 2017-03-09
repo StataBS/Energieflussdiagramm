@@ -6,9 +6,9 @@ var units = "GWh";
 
 var year=2014;
 
-var margin = {top: 10, right: 10, bottom: 10, left: 10},
-    width = 1200 - margin.left - margin.right,
-    height = 740 - margin.top - margin.bottom;
+var margin = {top: 5, right: 0, bottom: 5, left: 10},
+    width = 724 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
 
 var formatNumber = d3.format(".1f"),    // zero decimal places
     format = function(d) { return formatNumber(d) + " " + units; },
