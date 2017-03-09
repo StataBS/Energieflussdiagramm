@@ -1,0 +1,272 @@
+{
+"links": [
+{
+"color": "#0096aa",
+"source": "Wasserkraft",
+"target": "Umwandler Wasser/Photovoltaik",
+"value": "260.3"
+},
+{
+"color": "#b05d75",
+"source": "Umwandler Thermisch",
+"target": "Fernwärmenetz",
+"value": "1147.43767752"
+},
+{
+"color": "#b05d75",
+"source": "Fernwärmenetz",
+"target": "Verluste Fernwärme",
+"value": "109"
+},
+{
+"color": "#b05d75",
+"source": "Fernwärmenetz",
+"target": "Nichtwohnen",
+"value": "491.682026"
+},
+{
+"color": "#b05d75",
+"source": "Fernwärmenetz",
+"target": "Wohnen",
+"value": "546.704766"
+},
+{
+"color": "#0788a3",
+"source": "Umwandler Thermisch",
+"target": "Stromnetz",
+"value": "157.365491"
+},
+{
+"color": "#fedfc4",
+"source": "Sonne",
+"target": "Umwandler Wasser/Photovoltaik",
+"value": "6"
+},
+{
+"color": "#e588a3",
+"source": "Umweltwärme",
+"target": "Umwandler Thermisch",
+"value": "12.8"
+},
+{
+"color": "#e588a3",
+"source": "Umweltwärme",
+"target": "Wohnen",
+"value": "7.6"
+},
+{
+"color": "#fedfc4",
+"source": "Sonne",
+"target": "Nichtwohnen",
+"value": "0.92759643"
+},
+{
+"color": "#fedfc4",
+"source": "Sonne",
+"target": "Wohnen",
+"value": "8.34836787"
+},
+{
+"color": "#0788a3",
+"source": "Stromnetz",
+"target": "Nichtwohnen",
+"value": "1066.754603"
+},
+{
+"color": "#9fd175",
+"source": "Holz",
+"target": "Umwandler Thermisch",
+"value": "135.078"
+},
+{
+"color": "#9fd175",
+"source": "Holz",
+"target": "Nichtwohnen",
+"value": "2.464891"
+},
+{
+"color": "#9fd175",
+"source": "Holz",
+"target": "Wohnen",
+"value": "4.400793"
+},
+{
+"color": "#b18d74",
+"source": "Abfall",
+"target": "Umwandler Thermisch",
+"value": "722.68257765"
+},
+{
+"color": "#b18d74",
+"source": "Abfall",
+"target": "Nichtwohnen",
+"value": "114.373913"
+},
+{
+"color": "#fefa83",
+"source": "Erdgas",
+"target": "Gasnetz",
+"value": "1714.552196"
+},
+{
+"color": "#fb9a1d",
+"source": "Heizöl",
+"target": "Umwandler Thermisch",
+"value": "35.70322345"
+},
+{
+"color": "#fb9a1d",
+"source": "Heizöl",
+"target": "Nichtwohnen",
+"value": "131.64311033"
+},
+{
+"color": "#fb9a1d",
+"source": "Heizöl",
+"target": "Wohnen",
+"value": "311.48054593"
+},
+{
+"color": "#45515d",
+"source": "Diesel",
+"target": "Verkehr",
+"value": "394.92110856"
+},
+{
+"color": "#fedfc4",
+"source": "Benzin",
+"target": "Verkehr",
+"value": "345.635287"
+},
+{
+"color": "#0788a3",
+"source": "Elektrizität",
+"target": "Stromnetz",
+"value": "1136.695894"
+},
+{
+"color": "#fefa83",
+"source": "Gasnetz",
+"target": "Umwandler Thermisch",
+"value": "559.1085608"
+},
+{
+"color": "#fefa83",
+"source": "Gasnetz",
+"target": "Nichtwohnen",
+"value": "780.641555539442"
+},
+{
+"color": "#fefa83",
+"source": "Gasnetz",
+"target": "Wohnen",
+"value": "365.569880660558"
+},
+{
+"color": "#fefa83",
+"source": "Gasnetz",
+"target": "Verkehr",
+"value": "9.232199"
+},
+{
+"color": "#0788a3",
+"source": "Stromnetz",
+"target": "Wohnen",
+"value": "416.406782"
+},
+{
+"color": "#0788a3",
+"source": "Stromnetz",
+"target": "Verluste Strom",
+"value": "77.2"
+},
+{
+"color": "#0788a3",
+"source": "Umwandler Wasser/Photovoltaik",
+"target": "Stromnetz",
+"value": "266.3"
+}
+],
+"nodes": [
+{
+"color": "#0096aa",
+"name": "Umwandler Wasser/Photovoltaik"
+},
+{
+"color": "#0096aa",
+"name": "Wasserkraft"
+},
+{
+"color": "#b05d75",
+"name": "Fernwärmenetz"
+},
+{
+"color": "#b05d75",
+"name": "Verluste Fernwärme"
+},
+{
+"color": "#0788a3",
+"name": "Stromnetz"
+},
+{
+"color": "#7A7A7A",
+"name": "Nichtwohnen"
+},
+{
+"color": "#7A7A7A",
+"name": "Wohnen"
+},
+{
+"color": "#7A7A7A",
+"name": "Verkehr"
+},
+{
+"color": "#e588a3",
+"name": "Umweltwärme"
+},
+{
+"color": "#fedfc4",
+"name": "Sonne"
+},
+{
+"color": "#9fd175",
+"name": "Holz"
+},
+{
+"color": "#b18d74",
+"name": "Abfall"
+},
+{
+"color": "#fefa83",
+"name": "Erdgas"
+},
+{
+"color": "#fb9a1d",
+"name": "Heizöl"
+},
+{
+"color": "#45515d",
+"name": "Diesel"
+},
+{
+"color": "#fedfc4",
+"name": "Benzin"
+},
+{
+"color": "#0788a3",
+"name": "Elektrizität"
+},
+{
+"color": "#a74b59",
+"name": "Umwandler Thermisch"
+},
+{
+"color": "#fefa83",
+"name": "Gasnetz"
+},
+{
+"color": "#0788a3",
+"name": "Verluste Strom"
+}
+]
+}
