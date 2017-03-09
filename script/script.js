@@ -61,12 +61,19 @@ var render = function(year){
         .attr("id", function(d,i){d.id = i; return "link-"+i;}) // enables the click-event for highlighting
         .style("stroke", function(d){return d.color;})//add this to return the color of link
         .style("stroke-width", function(d) { return Math.max(1, d.dy); })
-        .sort(function(a, b) { return b.dy - a.dy; });
+        .sort(function(a, b) { return b.dy - a.dy; })
+        .on("mouseover", mouseover)
+        .on("mousemove", function(d){mousemove(d)})
+        .on("mouseout", mouseout)
+        ;
 
   // add the link titles
-    link.append("title")
-          .text(function(d) {
-          return d.source.name + ": " + format(d.value); });
+  /*
+  link.append("title")
+    .text(function(d) {
+      return d.source.name + ": " + format(d.value); 
+    });
+  */
 
   // add in the nodes
     var node = svg.append("g").selectAll(".node")
@@ -85,11 +92,15 @@ var render = function(year){
           .attr("height", function(d) { return d.dy; })
           .attr("width", sankey.nodeWidth())
           .style("fill", function(d) { return d.color;}) // modified node color
-          .style("stroke", function(d) { 
-            return d3.rgb(d.color).darker(0); }) // .darker(2) to show lines for rectangles
-        .append("title")
-          .text(function(d) { 
-            return d.name + ": " + format(d.value); });
+          .on("mouseover", mouseover)
+          .on("mousemove", function(d){mousemove(d)})
+          .on("mouseout", mouseout)
+          //.style("stroke", function(d) { 
+          //  return d3.rgb(d.color).darker(0); }) // .darker(2) to show lines for rectangles
+          //.append("title")
+          //.text(function(d) { 
+          //  return d.name + ": " + format(d.value); })
+            ;
 
   // add in the title for the nodes
     node.append("text")
@@ -102,6 +113,7 @@ var render = function(year){
       .filter(function(d) { return d.x < width / 2; })
         .attr("x", 6 + sankey.nodeWidth())
         .attr("text-anchor", "start");
+
 
   // Highlight
     function highlight_node_links(node,i){
@@ -148,6 +160,29 @@ var render = function(year){
     function highlight_link(id,opacity){
         d3.select("#link-"+id).style("stroke-opacity", opacity);
     }
+    
+    
+      // tooltips
+  var div = d3.select("body").append("div")
+			.attr("class", "tooltip")
+			.style("display", "none")
+			;
+			
+  function mouseover() {
+		div.style("display", "inline");
+	}
+	
+	function mousemove(d) {
+		div
+				.html("<strong>" + (d['name'] || d['source']['name']) + ": " + format(d.value) + "</strong>")
+				.style("left", (d3.event.pageX - 50) + "px")
+				.style("top", (d3.event.pageY - 11) + "px");
+	}
+	
+	function mouseout() {
+		div.style("display", "none");
+	}
+
 
   })
 };

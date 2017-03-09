@@ -1,11 +1,16 @@
 body {
   font-family: Arial;
-  font-size: 10px;
+  /*font-size: 12px;*/
+}
+
+.quelle {
+  padding-left: 10px; 
+  font-size: 11px;
 }
 
 text, .chart {
   font-weight: bold;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .node rect {
@@ -27,4 +32,17 @@ text, .chart {
 
 .link:hover {
   stroke-opacity: .9;
+}
+
+.tooltip {
+	position: absolute;
+	text-align: center;
+	/*width: 120px;
+	height: 32px;*/
+	padding: 8px;
+	margin-top: -20px;
+	font: 10px Arial, Helvetica;
+	background: #ddd;
+	pointer-events: none;
+	opacity: 1;
 }
