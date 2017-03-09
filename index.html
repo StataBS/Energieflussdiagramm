@@ -13,19 +13,14 @@
   </head>
 
   <body>
-    <div style="padding-left: 60px">
-      <div id="myButtons" class="btn-toolbar" data-toggle="buttons">
-          <label class="btn btn-success">
-            <input type="radio" name="options" id="2012" autocomplete="off"> 2012
-          </label>
-          <label class="btn btn-success">
-            <input type="radio" name="options" id="2014" autocomplete="off" checked> 2014
-          </label>
-      </div>
+    <div style="padding-left: 40px">
+      <label class="radio-inline">Datenjahr: </label>
+      <label class="radio-inline"><input type="radio" name="year" value="2012">2012</label>
+      <label class="radio-inline active"><input type="radio" name="year" value="2014" checked="">2014</label>
     </div>
     <div id="chart" style="padding: 10px 0px 0px 50px"></div>
-    <p style="padding: 0px 100px 0px 60px">Datenquelle: Statistisches Amt Basel-Stadt, Energiestatistik</p>
     <script src="script/script.js"></script>
+    <p style="padding: 0px 100px 0px 60px">Datenquelle: Statistisches Amt Basel-Stadt, Energiestatistik</p>
   </body>
 
 </html>

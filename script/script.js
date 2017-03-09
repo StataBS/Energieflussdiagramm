@@ -1,3 +1,7 @@
+// inspired by 
+// https://bost.ocks.org/mike/sankey/ 
+// http://bl.ocks.org/git-ashish/8959771
+
 var units = "GWh";
 
 var year=2014;
@@ -108,7 +112,7 @@ var render = function(year){
       var stroke_opacity = 0;
       if( d3.select(this).attr("data-clicked") == "1" ){
         d3.select(this).attr("data-clicked","0");
-        stroke_opacity = 0.2;
+        stroke_opacity = null;
       }else{
         d3.select(this).attr("data-clicked","1");
         stroke_opacity = 0.9;
@@ -154,10 +158,11 @@ var changeTitle = function(year){
   $("h2").html(newTitle);
 }
 
-$("#myButtons :input").change(function() {
+
+$('input:radio[name="year"]').change(function (event) {
     svg.selectAll("*").remove();
-    year=$(this).attr("id");    
-    changeTitle(year);
+    year=event.target.value;
+    //changeTitle(year);
     render(year);
 });
 
