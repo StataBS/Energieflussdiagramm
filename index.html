@@ -13,22 +13,19 @@
   </head>
 
   <body>
-    
-    <h2>Das interaktive Energieflussdiagramm Basel-Stadt 1900</h2>
-
-    <div id="myButtons" class="btn-group" data-toggle="buttons">
-      <label class="btn btn-success">
-        <input type="radio" name="options" id="2012" autocomplete="off"> 2012
-      </label>
-      <label class="btn btn-success">
-        <input type="radio" name="options" id="2014" autocomplete="off" checked> 2014
-      </label>
-  </div>
-
-    <div id="chart" style="padding: 50px 0px 0px 50px"></div>
+    <div style="padding-left: 60px">
+      <div id="myButtons" class="btn-toolbar" data-toggle="buttons">
+          <label class="btn btn-success">
+            <input type="radio" name="options" id="2012" autocomplete="off"> 2012
+          </label>
+          <label class="btn btn-success">
+            <input type="radio" name="options" id="2014" autocomplete="off" checked> 2014
+          </label>
+      </div>
+    </div>
+    <div id="chart" style="padding: 10px 0px 0px 50px"></div>
+    <p style="padding: 0px 100px 0px 60px">Datenquelle: Statistisches Amt Basel-Stadt, Energiestatistik</p>
     <script src="script/script.js"></script>
-
-    <p style="padding: 0px 100px 0px 60px">Datenquelle: Statistisches Amt Basel-Stadt. Realisiert mit <a href="https://d3js.org/">D3.js</a> nach der Umsetzung von <a href ="http://plnkr.co/edit/P8fB6mH5xYUWgEXBQ1Wz?p=preview">Plunker</a> auf Grundlage von <a href="https://bost.ocks.org/mike/sankey/">Mike Bostock</a> unter Einbezug von <a href="http://bl.ocks.org/git-ashish/8959771">Ashish Singh</a>.</p>
   </body>
 
 </html>
