@@ -34,6 +34,11 @@ var sankey = d3.sankey()
 var path = sankey.link();
 
 
+function replaceSpecialChars(str){
+  return str.replace(/[/ ]/g,'-')
+};
+
+
 // load the data
 var render = function(year){
   var jsonPath='data/energy' + year + '.json';
@@ -43,6 +48,7 @@ var render = function(year){
       graph.nodes.forEach(function(x) { nodeMap[x.name] = x; });
       graph.links = graph.links.map(function(x) {
         return {
+          id: replaceSpecialChars(nodeMap[x.source].name + "-" + nodeMap[x.target].name),
           source: nodeMap[x.source],
           target: nodeMap[x.target],
           value: x.value,
@@ -64,7 +70,7 @@ var render = function(year){
         .enter().append("path")
         .attr("class", "link")
         .attr("d", path)
-        .attr("id", function(d,i){d.id = i; return "link-"+i;}) // enables the click-event for highlighting
+        .attr("id", function(d){return "link-" + d.id;}) // enables the click-event for highlighting
         .style("stroke", function(d){return d.color;})//add this to return the color of link
         .style("stroke-width", function(d) { return Math.max(1, d.dy); })
         .sort(function(a, b) { return b.dy - a.dy; })
