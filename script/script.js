@@ -84,7 +84,7 @@ var render = function(year){
         .append("path")
           .attr("class", "link")
           .attr("d", sankey.link())
-          //.attr("id", function(d){return "link-" + d.id;}) 
+          .attr("id", function(d){return "link-" + d.id;}) 
           .style("stroke", function(d){return d.color;}) 
           .style("stroke-width", function(d) { return Math.max(1, d.dy); })
           .sort(function(a, b) { return b.dy - a.dy; })
@@ -121,11 +121,11 @@ var render = function(year){
         .append("g")
     ;
         
-        
     nodesEnter
         .attr("class", "node")
         .attr("transform", function(d) { 
           return "translate(" + d.x + "," + d.y + ")"; })
+        .attr("id", function(d){return "node-" + d.id;}) 
         .on("click", highlight_node_links) // enables the click-event for highlighting
         ;
 
@@ -157,9 +157,12 @@ var render = function(year){
 
     // UPDATE
     var nodesUpdate = node;
+    
+    console.log(nodesUpdate);  
         
     nodesUpdate
-      //.transition().duration(2000)
+      //.selectAll(".node")
+      //.transition()
       .attr("transform", function(d) { 
         return "translate(" + d.x + "," + d.y + ")"; })
     ;
