@@ -54,7 +54,10 @@ var render = function(year){
         .nodes(graph.nodes)
         .links(graph.links)
         .layout(32);
-
+    
+    // clear svg
+    svg.selectAll("*").remove();
+    
     // add in the links
     var link = svg.append("g").selectAll(".link")
         .data(graph.links)
@@ -183,7 +186,6 @@ var changeTitle = function(year){
 
 
 $('input:radio[name="year"]').change(function (event) {
-    svg.selectAll("*").remove();
     year=event.target.value;
     //changeTitle(year);
     render(year);
