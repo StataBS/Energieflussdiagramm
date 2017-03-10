@@ -5,6 +5,8 @@
 /*  global d3 
     global $
 */
+
+"use strict";
 var units = "GWh";
 
 var year=2014;
@@ -45,10 +47,14 @@ var render = function(year){
   d3.json(jsonPath, function(error, graph) {
 
       var nodeMap = {};
-      graph.nodes.forEach(function(x) { nodeMap[x.name] = x; });
+      graph.nodes.forEach(function(x) { 
+        nodeMap[x.name] = x;
+        nodeMap[x.name].type = 'node';
+      });
       graph.links = graph.links.map(function(x) {
         return {
           id: replaceSpecialChars(nodeMap[x.source].name + "-" + nodeMap[x.target].name),
+          type: 'link',
           source: nodeMap[x.source],
           target: nodeMap[x.target],
           value: x.value,
@@ -67,16 +73,17 @@ var render = function(year){
     // add in the links
     var link = svg.append("g").selectAll(".link")
         .data(graph.links)
-        .enter().append("path")
-        .attr("class", "link")
-        .attr("d", path)
-        .attr("id", function(d){return "link-" + d.id;}) // enables the click-event for highlighting
-        .style("stroke", function(d){return d.color;})//add this to return the color of link
-        .style("stroke-width", function(d) { return Math.max(1, d.dy); })
-        .sort(function(a, b) { return b.dy - a.dy; })
-        .on("mouseover", mouseover)
-        .on("mousemove", function(d){mousemove(d)})
-        .on("mouseout", mouseout)
+        .enter()
+          .append("path")
+          .attr("class", "link")
+          .attr("d", path)
+          .attr("id", function(d){return "link-" + d.id;}) // enables the click-event for highlighting
+          .style("stroke", function(d){return d.color;})//add this to return the color of link
+          .style("stroke-width", function(d) { return Math.max(1, d.dy); })
+          .sort(function(a, b) { return b.dy - a.dy; })
+          .on("mouseover", mouseover)
+          .on("mousemove", function(d){mousemove(d)})
+          .on("mouseout", mouseout)
         ;
 
 
@@ -86,9 +93,9 @@ var render = function(year){
       .enter().append("g")
         .attr("class", "node")
         .attr("transform", function(d) { 
-        return "translate(" + d.x + "," + d.y + ")"; })
+          return "translate(" + d.x + "," + d.y + ")"; })
         .on("click",highlight_node_links) // enables the click-event for highlighting
-        ;
+      ;
 
     // add the rectangles for the nodes
     node.append("rect")
@@ -171,8 +178,15 @@ var render = function(year){
   	}
   	
   	function mousemove(d) {
+  	  var html='';
+  	  if (d.type === 'node'){
+  	    html = "<strong>" + d.name + ": " + format(d.value) + "</strong>";
+  	  }
+  	  else {
+  	    html = "<strong>" + d.source.name + " \u2192 " + d.target.name + ": " + format(d.value) + "</strong>";
+  	  }
   		div
-  				.html("<strong>" + (d['name'] || d['source']['name']) + ": " + format(d.value) + "</strong>")
+  				.html(html)
   				.style("left", (d3.event.pageX - 50) + "px")
   				.style("top", (d3.event.pageY - 11) + "px");
   	}
