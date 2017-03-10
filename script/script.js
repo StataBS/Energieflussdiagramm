@@ -26,6 +26,9 @@ var svg = d3.select("#chart").append("svg")
   .append("g")
     .attr("transform", 
           "translate(" + margin.left + "," + margin.top + ")");
+          
+var svgLinkGroup = svg.append("g");
+var svgNodeGroup = svg.append("g");
 
 // Set the sankey diagram properties
 var sankey = d3.sankey()
@@ -33,15 +36,10 @@ var sankey = d3.sankey()
     .nodePadding(10)
     .size([width, height]);
 
-var path = sankey.link();
-
 
 function replaceSpecialChars(str){
-  return str.replace(/[/ ]/g,'-')
-};
-
-var t = d3.transition()
-    .duration(750);
+  return str.trim().replace(/[/ ]/g,'-');
+}
 
 
 // load the data
@@ -57,7 +55,7 @@ var render = function(year){
       });
       graph.links = graph.links.map(function(x) {
         return {
-          id: replaceSpecialChars(nodeMap[x.source].name + "-" + nodeMap[x.target].name),
+          id: replaceSpecialChars(nodeMap[x.source].name.trim() + "-" + nodeMap[x.target].name.trim()),
           type: 'link',
           source: nodeMap[x.source],
           target: nodeMap[x.target],
@@ -71,29 +69,26 @@ var render = function(year){
         .links(graph.links)
         .layout(32);
     
+    var t = d3.transition()
+      .duration(750);
+    
     // clear svg
-    // svg.selectAll("*").remove();
+    svg.selectAll(".path").remove();
+    svg.selectAll(".node").remove();
     
     // JOIN
-    var link = svg.append("g").selectAll(".link")
+    var link = svgLinkGroup.selectAll(".link")
       //.data(graph.links);
       .data(graph.links, function(d){return d.id});
       
-    /*
-    console.log('link update selection: ');
-    console.log(link);
-    console.log('link enter selection: ');
-    console.log(link.enter());
-    */
 
-      
     // ENTER    
     // add in the links 
     link
       .enter()
         .append("path")
           .attr("class", "link")
-          .attr("d", path)
+          .attr("d", sankey.link())
           .attr("id", function(d){return "link-" + d.id;}) 
           .style("stroke", function(d){return d.color;}) 
           .style("stroke-width", function(d) { return Math.max(1, d.dy); })
@@ -103,6 +98,20 @@ var render = function(year){
           .on("mouseout", mouseout)
       ;
     
+    
+    // UPDATE
+    link
+      .transition(t)
+      .attr("d", sankey.link())
+    ;
+    
+    // EXIT
+    link
+      .exit()
+        .remove()
+    ;
+    
+    /*
     // add in the nodes
     var node = svg.append("g").selectAll(".node")
       .data(graph.nodes)
@@ -139,7 +148,7 @@ var render = function(year){
         .attr("x", 6 + sankey.nodeWidth())
         .attr("text-anchor", "start");
 
-
+*/
     // Highlight
     function highlight_node_links(node,i){
       var remainingNodes=[],
