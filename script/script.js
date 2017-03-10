@@ -27,8 +27,8 @@ var svg = d3.select("#chart").append("svg")
     .attr("transform", 
           "translate(" + margin.left + "," + margin.top + ")");
           
-var svgLinkGroup = svg.append("g");
-var svgNodeGroup = svg.append("g");
+var svgLinkGroup = svg.append("g").attr('id', 'links');
+var svgNodeGroup = svg.append("g").attr('id', 'nodes');
 
 // Set the sankey diagram properties
 var sankey = d3.sankey()
@@ -60,7 +60,7 @@ var render = function(year){
           source: nodeMap[x.source],
           target: nodeMap[x.target],
           value: x.value,
-          color: x.color //get the color in the json to links
+          color: x.color 
         };
       });
 
@@ -69,12 +69,7 @@ var render = function(year){
         .links(graph.links)
         .layout(32);
     
-    var t = d3.transition()
-      .duration(750);
-    
-    // clear svg
-    svg.selectAll(".path").remove();
-    svg.selectAll(".node").remove();
+    var t = d3.transition().duration(2000);
     
     // JOIN
     var link = svgLinkGroup.selectAll(".link")
@@ -89,7 +84,7 @@ var render = function(year){
         .append("path")
           .attr("class", "link")
           .attr("d", sankey.link())
-          .attr("id", function(d){return "link-" + d.id;}) 
+          //.attr("id", function(d){return "link-" + d.id;}) 
           .style("stroke", function(d){return d.color;}) 
           .style("stroke-width", function(d) { return Math.max(1, d.dy); })
           .sort(function(a, b) { return b.dy - a.dy; })
@@ -101,8 +96,9 @@ var render = function(year){
     
     // UPDATE
     link
-      .transition(t)
+      .transition()
       .attr("d", sankey.link())
+      .style("stroke-width", function(d) { return Math.max(1, d.dy); })
     ;
     
     // EXIT
@@ -111,33 +107,42 @@ var render = function(year){
         .remove()
     ;
     
-    /*
-    // add in the nodes
-    var node = svg.append("g").selectAll(".node")
-      .data(graph.nodes)
+    
+
+    // JOIN
+    var node = svgNodeGroup.selectAll(".node")
+      .data(graph.nodes, function(d){return d.id;});
+
+
+    // ENTER
+    var nodesEnter = 
+    node
       .enter()
         .append("g")
+    ;
+        
+        
+    nodesEnter
         .attr("class", "node")
         .attr("transform", function(d) { 
           return "translate(" + d.x + "," + d.y + ")"; })
         .on("click", highlight_node_links) // enables the click-event for highlighting
         ;
 
-
     // add the rectangles for the nodes
-    node.append("rect")
+    nodesEnter
+      .append("rect")
       .attr("height", function(d) { return d.dy; })
       .attr("width", sankey.nodeWidth())
-      .style("fill", function(d) { return d.color;}) // modified node color
+      .style("fill", function(d) { return d.color;}) 
       .on("mouseover", mouseover)
       .on("mousemove", function(d){mousemove(d)})
       .on("mouseout", mouseout)
       ;
 
-    
-    
     // add in the title for the nodes
-    node.append("text")
+    nodesEnter
+      .append("text")
         .attr("x", -6)
         .attr("y", function(d) { return d.dy / 2; })
         .attr("dy", ".35em")
@@ -145,10 +150,56 @@ var render = function(year){
         .attr("transform", null)
         .text(function(d) { return d.name; })
         .filter(function(d) { return d.x < width / 2; })
-        .attr("x", 6 + sankey.nodeWidth())
-        .attr("text-anchor", "start");
+          .attr("x", 6 + sankey.nodeWidth())
+          .attr("text-anchor", "start")
+    ;
 
-*/
+
+    // UPDATE
+    var nodesUpdate = node;
+        
+    nodesUpdate
+      //.transition().duration(2000)
+      .attr("transform", function(d) { 
+        return "translate(" + d.x + "," + d.y + ")"; })
+    ;
+
+    
+    // update the rectangles for the nodes
+    nodesUpdate
+      .transition()
+      .select("rect")
+        .attr("height", function(d) { return d.dy; })
+        .attr("width", sankey.nodeWidth())
+        .style("fill", function(d) { return d.color;}) 
+    ;
+
+    // add in the title for the nodes
+    nodesUpdate
+      .transition()
+      .select("text")
+        .attr("x", -6)
+        .attr("y", function(d) { return d.dy / 2; })
+        .attr("dy", ".35em")
+        .attr("text-anchor", "end")
+        //.attr("transform", null)
+        .text(function(d) { return d.name; })
+        .filter(function(d) { return d.x < width / 2; })
+          .attr("x", 6 + sankey.nodeWidth())
+          .attr("text-anchor", "start")
+    ;
+
+    
+    
+
+
+    // EXIT
+    node
+      .exit()
+        .remove()
+    ;
+
+
     // Highlight
     function highlight_node_links(node,i){
       var remainingNodes=[],
@@ -242,6 +293,6 @@ $('input:radio[name="year"]').change(function (event) {
 
 
 $(document).ready(function(){
-  changeTitle(year);
+  //changeTitle(year);
   render(year);
 })
