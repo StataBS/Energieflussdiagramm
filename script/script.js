@@ -40,6 +40,9 @@ function replaceSpecialChars(str){
   return str.replace(/[/ ]/g,'-')
 };
 
+var t = d3.transition()
+    .duration(750);
+
 
 // load the data
 var render = function(year){
@@ -50,6 +53,7 @@ var render = function(year){
       graph.nodes.forEach(function(x) { 
         nodeMap[x.name] = x;
         nodeMap[x.name].type = 'node';
+        nodeMap[x.name].id = replaceSpecialChars(x.name);
       });
       graph.links = graph.links.map(function(x) {
         return {
@@ -68,34 +72,48 @@ var render = function(year){
         .layout(32);
     
     // clear svg
-    svg.selectAll("*").remove();
+    // svg.selectAll("*").remove();
     
-    // add in the links
+    // JOIN
     var link = svg.append("g").selectAll(".link")
-        .data(graph.links)
-        .enter()
-          .append("path")
+      //.data(graph.links);
+      .data(graph.links, function(d){return d.id});
+      
+    /*
+    console.log('link update selection: ');
+    console.log(link);
+    console.log('link enter selection: ');
+    console.log(link.enter());
+    */
+
+      
+    // ENTER    
+    // add in the links 
+    link
+      .enter()
+        .append("path")
           .attr("class", "link")
           .attr("d", path)
-          .attr("id", function(d){return "link-" + d.id;}) // enables the click-event for highlighting
-          .style("stroke", function(d){return d.color;})//add this to return the color of link
+          .attr("id", function(d){return "link-" + d.id;}) 
+          .style("stroke", function(d){return d.color;}) 
           .style("stroke-width", function(d) { return Math.max(1, d.dy); })
           .sort(function(a, b) { return b.dy - a.dy; })
           .on("mouseover", mouseover)
           .on("mousemove", function(d){mousemove(d)})
           .on("mouseout", mouseout)
-        ;
-
-
+      ;
+    
     // add in the nodes
     var node = svg.append("g").selectAll(".node")
       .data(graph.nodes)
-      .enter().append("g")
+      .enter()
+        .append("g")
         .attr("class", "node")
         .attr("transform", function(d) { 
           return "translate(" + d.x + "," + d.y + ")"; })
-        .on("click",highlight_node_links) // enables the click-event for highlighting
-      ;
+        .on("click", highlight_node_links) // enables the click-event for highlighting
+        ;
+
 
     // add the rectangles for the nodes
     node.append("rect")
@@ -107,6 +125,8 @@ var render = function(year){
       .on("mouseout", mouseout)
       ;
 
+    
+    
     // add in the title for the nodes
     node.append("text")
         .attr("x", -6)
