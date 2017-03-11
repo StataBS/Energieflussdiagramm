@@ -16,8 +16,7 @@ var margin = {top: 5, right: 0, bottom: 5, left: 10},
     height = 600 - margin.top - margin.bottom;
 
 var formatNumber = d3.format(".1f"),    // zero decimal places
-    format = function(d) { return formatNumber(d) + " " + units; },
-    color = d3.scale.category20();
+    format = function(d) { return formatNumber(d) + " " + units; };
 
 // append the svg canvas to the page
 var svg = d3.select("#chart").append("svg")
