@@ -32,8 +32,15 @@ var de_CH = d3.locale({
 
 
 d3.format = de_CH.numberFormat;
-var formatNumber = d3.format(",.1f"),    // zero decimal places
+var formatNumber = d3.format(",.1f"),   
     format = function(d) { return formatNumber(d) + " " + units; };
+
+// tooltips
+var div = d3.select("body").append("div")
+		.attr("class", "tooltip")
+		.style("display", "none")
+		;
+
 
 // append the svg canvas to the page
 var svg = d3.select("#chart").append("svg")
@@ -84,8 +91,8 @@ var render = function(year){
         .nodes(graph.nodes)
         .links(graph.links)
         .layout(32);
-    
-    var t = d3.transition().duration(2000);
+
+
     
     // JOIN
     var link = svgLinkGroup.selectAll(".link")
@@ -123,11 +130,32 @@ var render = function(year){
         .remove()
     ;
     
-    
+
 
     // JOIN
-    var node = svgNodeGroup.selectAll(".node")
+    var node = svgNodeGroup.selectAll("g.node")
       .data(graph.nodes, function(d){return d.id;});
+
+
+    // UPDATE
+    node
+      .transition()
+      .attr("transform", function(d) { 
+        return "translate(" + d.x + "," + d.y + ")"; })
+      .select("rect")
+        .attr("height", function(d) { return d.dy; })
+        .attr("width", sankey.nodeWidth())
+        .style("fill", function(d) { return d.color;}) 
+
+    ;
+
+    // add in the title for the nodes
+    node
+      .select("text")
+        .transition()
+        .attr("y", function(d) { return d.dy / 2; })
+    ;
+
 
 
     // ENTER
@@ -142,7 +170,7 @@ var render = function(year){
         .attr("transform", function(d) { 
           return "translate(" + d.x + "," + d.y + ")"; })
         .attr("id", function(d){return "node-" + d.id;}) 
-        .on("click", highlight_node_links) // enables the click-event for highlighting
+        //.on("click", highlight_node_links) // enables the click-event for highlighting
         ;
 
     // add the rectangles for the nodes
@@ -169,45 +197,6 @@ var render = function(year){
           .attr("x", 6 + sankey.nodeWidth())
           .attr("text-anchor", "start")
     ;
-
-
-    // UPDATE
-    var nodesUpdate = node;
-        
-    nodesUpdate
-      //.selectAll(".node")
-      //.transition()
-      .attr("transform", function(d) { 
-        return "translate(" + d.x + "," + d.y + ")"; })
-    ;
-
-    
-    // update the rectangles for the nodes
-    nodesUpdate
-      .transition()
-      .select("rect")
-        .attr("height", function(d) { return d.dy; })
-        .attr("width", sankey.nodeWidth())
-        .style("fill", function(d) { return d.color;}) 
-    ;
-
-    // add in the title for the nodes
-    nodesUpdate
-      .transition()
-      .select("text")
-        .attr("x", -6)
-        .attr("y", function(d) { return d.dy / 2; })
-        .attr("dy", ".35em")
-        .attr("text-anchor", "end")
-        //.attr("transform", null)
-        .text(function(d) { return d.name; })
-        .filter(function(d) { return d.x < width / 2; })
-          .attr("x", 6 + sankey.nodeWidth())
-          .attr("text-anchor", "start")
-    ;
-
-    
-    
 
 
     // EXIT
@@ -264,12 +253,6 @@ var render = function(year){
     }
     
     
-    // tooltips
-    var div = d3.select("body").append("div")
-  			.attr("class", "tooltip")
-  			.style("display", "none")
-  			;
-  			
     function mouseover() {
   		div.style("display", "inline");
   	}
@@ -293,7 +276,9 @@ var render = function(year){
   	}
 
   });
+  
 };
+
 
 var changeTitle = function(year){
   var title=$("h2").text();
