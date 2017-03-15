@@ -156,8 +156,6 @@ var render = function(year){
 
     // UPDATE
     var nodesUpdate = node;
-    
-    console.log(nodesUpdate);  
         
     nodesUpdate
       //.selectAll(".node")
