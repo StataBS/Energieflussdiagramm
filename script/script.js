@@ -15,7 +15,24 @@ var margin = {top: 5, right: 0, bottom: 5, left: 10},
     width = 724 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
-var formatNumber = d3.format(".1f"),    // zero decimal places
+var de_CH = d3.locale({
+        'decimal': ',',
+        'thousands': "\u00A0",
+        'grouping': [3],
+        'currency': ['CHF', ''],
+        'dateTime': '%A, %d.%m.%Y, %X Uhr',
+        'date': '%d.%m.%Y',
+        'time': '%H:%M:%S',
+        'periods': ['AM', 'PM'],
+        'days': ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
+        'shortDays': ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
+        'months': ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+        'shortMonths': ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez']
+});
+
+
+d3.format = de_CH.numberFormat;
+var formatNumber = d3.format(",.1f"),    // zero decimal places
     format = function(d) { return formatNumber(d) + " " + units; };
 
 // append the svg canvas to the page
