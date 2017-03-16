@@ -96,7 +96,6 @@ var render = function(year){
     
     // JOIN
     var link = svgLinkGroup.selectAll(".link")
-      //.data(graph.links);
       .data(graph.links, function(d){return d.id});
       
 
@@ -170,7 +169,7 @@ var render = function(year){
         .attr("transform", function(d) { 
           return "translate(" + d.x + "," + d.y + ")"; })
         .attr("id", function(d){return "node-" + d.id;}) 
-        //.on("click", highlight_node_links) // enables the click-event for highlighting
+        .on("click", highlight_node_links)
         ;
 
     // add the rectangles for the nodes
@@ -280,21 +279,12 @@ var render = function(year){
 };
 
 
-var changeTitle = function(year){
-  var title=$("h2").text();
-  var newTitle = title.substr(0, title.length - 4) + year;
-  $("h2").html(newTitle);
-};
-
-
 $('input:radio[name="year"]').change(function (event) {
     year=event.target.value;
-    //changeTitle(year);
     render(year);
 });
 
 
 $(document).ready(function(){
-  //changeTitle(year);
   render(year);
 })
