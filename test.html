@@ -2,54 +2,58 @@
 <html>
 
   <head>
-    <link rel="stylesheet" href="style/bootstrap.min.css">    
-    <link rel="stylesheet" href="style/style.css">
-        
+
     <script src="script/d3.min.js"></script>
     <!--script src="https://d3js.org/d3.v4.min.js"></script-->
 
   </head>
 
   <body>
-    <div>change data</div>
+    <button type="button" class="btn btn-primary">Change Data</button>
     <div id="chart"></div>
     <script>
       /* global d3  */
-    
-      var data=[1,2,3,4,5];
-      var svg = d3.select("#chart").append("svg");
       
+      d3.selectAll(".btn").on("click", changeData);
       
+      var data=[1];
+      var svg = d3.select("#chart").append("svg").append("g");
       
       render(data);
       
-      
-      
-      
       function changeData(){
-        return data.join([5, 7, 8]);
+        data = data.concat(data);
+        return render(data);
       }
 
     
       function render(data){
-        var nodes = svg.selectAll(".node").data(data);
+        var nodes = svg.selectAll("g.node")
+          .data(data);
 
         // update
         nodes
-          .attr("transform", function(d){return "translate(" + 25 + "," + 15 * d + ")";})
+        .transition()
+          .attr("transform", function(d, i){return "translate(" + 50 + "," + 15 * i + ")";})
         ;
   
         
         // enter
         nodes.enter()
           .append("g")
-            .attr("transform", function(d){return "translate(" + 1 + "," + 15 * d + ")";})
+            .attr("class", "node")
+            .attr("transform", function(d, i){return "translate(" + 1 + "," + 15 * i + ")";})
             .append("rect")
               .attr("height", 10)
               .attr("width", 10)
+              .style("fill", "black")
         ;
-        
+        /*
+        console.log(nodes);
         console.log(nodes.size());
+        console.log(nodes.enter());
+        console.log(nodes.enter().size());
+        */
         
 
         
