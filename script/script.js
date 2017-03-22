@@ -12,8 +12,8 @@ var units = "GWh";
 var year=2014;
 
 var margin = {top: 5, right: 0, bottom: 5, left: 10},
-    width = 724 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
+    width = 951 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
 var de_CH = d3.locale({
         'decimal': ',',
