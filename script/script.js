@@ -11,7 +11,7 @@ var units = "GWh";
 
 var year=2014;
 
-var margin = {top: 5, right: 0, bottom: 5, left: 10},
+var margin = {top: 5, right: 40, bottom: 5, left: 40},
     width = 951 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -259,10 +259,10 @@ var render = function(year){
   	function mousemove(d) {
   	  var html='';
   	  if (d.type === 'node'){
-  	    html = "<strong>" + d.name + ": " + format(d.value) + "</strong>";
+  	    html = "<strong>" + d.name + ": <br/>" + format(d.value) + "</strong>";
   	  }
   	  else {
-  	    html = "<strong>" + d.source.name + " \u2192 " + d.target.name + ": " + format(d.value) + "</strong>";
+  	    html = "<strong>" + d.source.name + " \u2192 " + d.target.name + ": <br/>" + format(d.value) + "</strong>";
   	  }
   		div
   				.html(html)
