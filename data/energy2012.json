@@ -49,10 +49,16 @@
 "value": "12.8"
 },
 {
+"color": "#e588a3", 
+"source": "Umweltwärme", 
+"target": "Nichtwohnen", 
+"value": "4.7"
+},
+{
 "color": "#e588a3",
 "source": "Umweltwärme",
 "target": "Wohnen",
-"value": "7.6"
+"value": "2.9"
 },
 {
 "color": "#fedfc4",
@@ -64,13 +70,13 @@
 "color": "#fedfc4",
 "source": "Sonne",
 "target": "Wohnen",
-"value": "8.34836787"
+"value": "8.4"
 },
 {
 "color": "#0788a3",
 "source": "Stromnetz",
 "target": "Nichtwohnen",
-"value": "1066.754603"
+"value": "1044.7"
 },
 {
 "color": "#9fd175",
@@ -82,7 +88,7 @@
 "color": "#9fd175",
 "source": "Holz",
 "target": "Nichtwohnen",
-"value": "2.464891"
+"value": "3.6"
 },
 {
 "color": "#9fd175",
@@ -100,7 +106,7 @@
 "color": "#b18d74",
 "source": "Abfall",
 "target": "Nichtwohnen",
-"value": "114.373913"
+"value": "113.3"
 },
 {
 "color": "#fefa83",
@@ -154,13 +160,13 @@
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Nichtwohnen",
-"value": "780.641555539442"
+"value": "604.2"
 },
 {
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Wohnen",
-"value": "365.569880660558"
+"value": "542.1"
 },
 {
 "color": "#fefa83",
@@ -172,7 +178,13 @@
 "color": "#0788a3",
 "source": "Stromnetz",
 "target": "Wohnen",
-"value": "416.406782"
+"value": "395.3"
+},
+  {
+"color": "#0788a3", 
+"source": "Stromnetz", 
+"target": "Verkehr", 
+"value": "62.5"
 },
 {
 "color": "#0788a3",
