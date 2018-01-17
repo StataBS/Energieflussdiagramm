@@ -52,13 +52,13 @@
 "color": "#e588a3", 
 "source": "Umweltwärme", 
 "target": "Nichtwohnen", 
-"value": "4.7"
+"value": "2.9"
 },
 {
 "color": "#e588a3",
 "source": "Umweltwärme",
 "target": "Wohnen",
-"value": "2.9"
+"value": "4.7"
 },
 {
 "color": "#fedfc4",
@@ -184,7 +184,7 @@
 "color": "#0788a3", 
 "source": "Stromnetz", 
 "target": "Verkehr", 
-"value": "62.5"
+"value": "67.5"
 },
 {
 "color": "#0788a3",
