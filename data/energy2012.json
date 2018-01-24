@@ -22,13 +22,13 @@
 "color": "#b05d75",
 "source": "Fernwärmenetz",
 "target": "Nichtwohnen",
-"value": "491.682026"
+"value": "555.1"
 },
 {
 "color": "#b05d75",
 "source": "Fernwärmenetz",
 "target": "Wohnen",
-"value": "546.704766"
+"value": "483.3"
 },
 {
 "color": "#0788a3",
@@ -49,28 +49,34 @@
 "value": "12.8"
 },
 {
+"color": "#e588a3", 
+"source": "Umweltwärme", 
+"target": "Nichtwohnen", 
+"value": "2.9"
+},
+{
 "color": "#e588a3",
 "source": "Umweltwärme",
 "target": "Wohnen",
-"value": "7.6"
+"value": "4.7"
 },
 {
 "color": "#fedfc4",
 "source": "Sonne",
 "target": "Nichtwohnen",
-"value": "0.92759643"
+"value": "1.2"
 },
 {
 "color": "#fedfc4",
 "source": "Sonne",
 "target": "Wohnen",
-"value": "8.34836787"
+"value": "8.1"
 },
 {
 "color": "#0788a3",
 "source": "Stromnetz",
 "target": "Nichtwohnen",
-"value": "1066.754603"
+"value": "973.9"
 },
 {
 "color": "#9fd175",
@@ -82,13 +88,13 @@
 "color": "#9fd175",
 "source": "Holz",
 "target": "Nichtwohnen",
-"value": "2.464891"
+"value": "4.6"
 },
 {
 "color": "#9fd175",
 "source": "Holz",
 "target": "Wohnen",
-"value": "4.400793"
+"value": "3.4"
 },
 {
 "color": "#b18d74",
@@ -100,7 +106,7 @@
 "color": "#b18d74",
 "source": "Abfall",
 "target": "Nichtwohnen",
-"value": "114.373913"
+"value": "113.3"
 },
 {
 "color": "#fefa83",
@@ -118,13 +124,13 @@
 "color": "#fb9a1d",
 "source": "Heizöl",
 "target": "Nichtwohnen",
-"value": "131.64311033"
+"value": "232.2"
 },
 {
 "color": "#fb9a1d",
 "source": "Heizöl",
 "target": "Wohnen",
-"value": "311.48054593"
+"value": "211.0"
 },
 {
 "color": "#45515d",
@@ -154,25 +160,31 @@
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Nichtwohnen",
-"value": "780.641555539442"
+"value": "749.1"
 },
 {
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Wohnen",
-"value": "365.569880660558"
+"value": "394.0"
 },
 {
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Verkehr",
-"value": "9.232199"
+"value": "12"
 },
 {
 "color": "#0788a3",
 "source": "Stromnetz",
 "target": "Wohnen",
-"value": "416.406782"
+"value": "441.7"
+},
+  {
+"color": "#0788a3", 
+"source": "Stromnetz", 
+"target": "Verkehr", 
+"value": "67.5"
 },
 {
 "color": "#0788a3",
