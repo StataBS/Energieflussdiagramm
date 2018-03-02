@@ -22,13 +22,13 @@
 "color": "#b05d75",
 "source": "Fernwärmenetz",
 "target": "Nichtwohnen",
-"value": "555.1"
+"value": "537.2"
 },
 {
 "color": "#b05d75",
 "source": "Fernwärmenetz",
 "target": "Wohnen",
-"value": "537.2"
+"value": "533.2"
 },
 {
 "color": "#0788a3",
@@ -124,13 +124,13 @@
 "color": "#fb9a1d",
 "source": "Heizöl",
 "target": "Nichtwohnen",
-"value": "232.2"
+"value": "101.7"
 },
 {
 "color": "#fb9a1d",
 "source": "Heizöl",
 "target": "Wohnen",
-"value": "101.7"
+"value": "401.4"
 },
 {
 "color": "#45515d",
