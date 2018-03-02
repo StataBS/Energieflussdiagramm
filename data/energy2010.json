@@ -22,13 +22,13 @@
 "color": "#b05d75",
 "source": "Fernwärmenetz",
 "target": "Nichtwohnen",
-"value": "537.2"
+"value": "572.2"
 },
 {
 "color": "#b05d75",
 "source": "Fernwärmenetz",
 "target": "Wohnen",
-"value": "533.2"
+"value": "498.2"
 },
 {
 "color": "#0788a3",
@@ -52,31 +52,31 @@
 "color": "#e588a3", 
 "source": "Umweltwärme", 
 "target": "Nichtwohnen", 
-"value": "1.5"
+"value": "2.8"
 },
 {
 "color": "#e588a3",
 "source": "Umweltwärme",
 "target": "Wohnen",
-"value": "5.8"
+"value": "4.5"
 },
 {
 "color": "#fedfc4",
 "source": "Sonne",
 "target": "Nichtwohnen",
-"value": "0.7"
+"value": "0.9"
 },
 {
 "color": "#fedfc4",
 "source": "Sonne",
 "target": "Wohnen",
-"value": "6.5"
+"value": "6.3"
 },
 {
 "color": "#0788a3",
 "source": "Stromnetz",
 "target": "Nichtwohnen",
-"value": "1117.8"
+"value": "1027.5"
 },
 {
 "color": "#9fd175",
@@ -88,13 +88,13 @@
 "color": "#9fd175",
 "source": "Holz",
 "target": "Nichtwohnen",
-"value": "0.2"
+"value": "4.2"
 },
 {
 "color": "#9fd175",
 "source": "Holz",
 "target": "Wohnen",
-"value": "7.1"
+"value": "3.1"
 },
 {
 "color": "#b18d74",
@@ -124,13 +124,13 @@
 "color": "#fb9a1d",
 "source": "Heizöl",
 "target": "Nichtwohnen",
-"value": "101.7"
+"value": "263.6"
 },
 {
 "color": "#fb9a1d",
 "source": "Heizöl",
 "target": "Wohnen",
-"value": "401.4"
+"value": "239.5"
 },
 {
 "color": "#45515d",
@@ -160,31 +160,31 @@
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Nichtwohnen",
-"value": "486.0"
+"value": "817.1
 },
 {
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Wohnen",
-"value": "761.4"
+"value": "429.8"
 },
 {
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Verkehr",
-"value": "13.0"
+"value": "13.4"
 },
 {
 "color": "#0788a3",
 "source": "Stromnetz",
 "target": "Wohnen",
-"value": "403.8"
+"value": "466.1"
 },
   {
 "color": "#0788a3", 
 "source": "Stromnetz", 
 "target": "Verkehr", 
-"value": "43.2"
+"value": "71.2"
 },
 {
 "color": "#0788a3",
