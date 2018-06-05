@@ -146,7 +146,7 @@
 },
 {
 "color": "#45515d",
-"source": "Benzin",
+"source": "Bioethanol",
 "target": "Verkehr",
 "value": "0.771679997"
 },
@@ -221,6 +221,12 @@
 "source": "Fernwärmenetz",
 "target": "Export",
 "value": "11.90049553"
+},
+{
+"color": "#0788a3",
+"source": "Elektrizität",
+"target": "Umwandler Thermisch",
+"value": "5.894726276"
 }
 ],
 "nodes": [
