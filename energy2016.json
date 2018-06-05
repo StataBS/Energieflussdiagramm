@@ -112,7 +112,7 @@
 "color": "#fefa83",
 "source": "Erdgas",
 "target": "Gasnetz",
-"value": "1475.344116"
+"value": "1475.818516"
 },
 {
 "color": "#fb9a1d",
@@ -142,13 +142,7 @@
 "color": "#fedfc4",
 "source": "Benzin",
 "target": "Verkehr",
-"value": "377.8197937"
-},
-{
-"color": "#45515d",
-"source": "Bioethanol",
-"target": "Verkehr",
-"value": "0.771679997"
+"value": "378.591473697"
 },
 {
 "color": "#0788a3",
@@ -172,7 +166,7 @@
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Nichtwohnen",
-"value": "502.6679821"
+"value": "503.1423821"
 },
 {
 "color": "#fefa83",
@@ -297,10 +291,6 @@
 {
 "color": "#fedfc4",
 "name": "Benzin"
-},,
-{
-"color": "#fedfc4",
-"name": "Bioethanol"
 }
 {
 "color": "#0788a3",
