@@ -152,6 +152,12 @@
 },
 {
 "color": "#0788a3",
+"source": "Stromnetz",
+"target": "Verkehr",
+"value": "61.6"
+},
+{
+"color": "#0788a3",
 "source": "Elektrizität",
 "target": "Stromnetz",
 "value": "974.6126099"
@@ -197,6 +203,12 @@
 "source": "Umwandler Wasser/Photovoltaik",
 "target": "Stromnetz",
 "value": "279.1368103"
+},
+{
+"color": "#b05d75",
+"source": "Umweltwärme",
+"target": "Fernwärmenetz",
+"value": "5.373957157"
 },
 {
 "color": "#b05d75",
