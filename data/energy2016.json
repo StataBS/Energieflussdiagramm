@@ -297,7 +297,11 @@
 {
 "color": "#fedfc4",
 "name": "Benzin"
-},
+},,
+{
+"color": "#fedfc4",
+"name": "Bioethanol"
+}
 {
 "color": "#0788a3",
 "name": "Elektrizität"
