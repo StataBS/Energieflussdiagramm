@@ -112,7 +112,7 @@
 "color": "#fefa83",
 "source": "Erdgas",
 "target": "Gasnetz",
-"value": "1475.344116"
+"value": "1475.818516"
 },
 {
 "color": "#fb9a1d",
@@ -166,7 +166,7 @@
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Nichtwohnen",
-"value": "502.6679821"
+"value": "503.1423821"
 },
 {
 "color": "#fefa83",
@@ -291,11 +291,7 @@
 {
 "color": "#fedfc4",
 "name": "Benzin"
-},
-{
-"color": "#fedfc4",
-"name": "Bioethanol"
-},
+}
 {
 "color": "#0788a3",
 "name": "Elektrizität"
