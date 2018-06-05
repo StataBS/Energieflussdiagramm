@@ -22,7 +22,7 @@
 "color": "#b05d75",
 "source": "Fernwärmenetz",
 "target": "Nichtwohnen",
-"value": "472.8368046"
+"value": "478.210761757"
 },
 {
 "color": "#b05d75",
@@ -211,16 +211,16 @@
 "value": "5.373957157"
 },
 {
-"color": "#b05d75",
-"source": "Fernwärmenetz",
-"target": "Nichtwohnen",
-"value": "5.373957157"
-},
-{
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Nichtwohnen",
 "value": "0.474400014"
+},
+{
+"color": "#fefa83",
+"source": "Fernwärmenetz",
+"target": "Export",
+"value": "11.90049553"
 }
 ],
 "nodes": [
@@ -247,6 +247,10 @@
 {
 "color": "#0788a3",
 "name": "Stromnetz"
+},
+{
+"color": "#9ba076",
+"name": "Export"
 },
 {
 "color": "#9ba076",
