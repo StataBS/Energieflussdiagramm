@@ -3,7 +3,7 @@
 {
 "color": "#0096aa",
 "source": "Wasserkraft",
-"target": "Umwandler Wasser/Photovoltaik",
+"target": "Umwandler Wasser/Fotovoltaik",
 "value": "210.2"
 },
 {
@@ -39,7 +39,7 @@
 {
 "color": "#fedfc4",
 "source": "Sonne",
-"target": "Umwandler Wasser/Photovoltaik",
+"target": "Umwandler Wasser/Fotovoltaik",
 "value": "3.4"
 },
 {
@@ -194,7 +194,7 @@
 },
 {
 "color": "#0788a3",
-"source": "Umwandler Wasser/Photovoltaik",
+"source": "Umwandler Wasser/Fotovoltaik",
 "target": "Stromnetz",
 "value": "213.6"
 }
@@ -202,7 +202,7 @@
 "nodes": [
 {
 "color": "#0096aa",
-"name": "Umwandler Wasser/Photovoltaik"
+"name": "Umwandler Wasser/Fotovoltaik"
 },
 {
 "color": "#0096aa",
