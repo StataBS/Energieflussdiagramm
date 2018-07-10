@@ -1,9 +1,9 @@
-{
+﻿{
 "links": [
 {
 "color": "#0096aa",
 "source": "Wasserkraft",
-"target": "Umwandler Wasser/Fotovoltaik",
+"target": "Umwandler Wasser/Photovoltaik",
 "value": "279.1368103"
 },
 {
@@ -39,7 +39,7 @@
 {
 "color": "#fedfc4",
 "source": "Sonne",
-"target": "Umwandler Wasser/Fotovoltaik",
+"target": "Umwandler Wasser/Photovoltaik",
 "value": "20.858757"
 },
 {
@@ -166,7 +166,7 @@
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Nichtwohnen",
-"value": "503.1423821"
+"value": "502.6679820863148"
 },
 {
 "color": "#fefa83",
@@ -178,7 +178,7 @@
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Verkehr",
-"value": "23.33316231"
+"value": "23.80756232368523"
 },
 {
 "color": "#0788a3",
@@ -194,7 +194,7 @@
 },
 {
 "color": "#0788a3",
-"source": "Umwandler Wasser/Fotovoltaik",
+"source": "Umwandler Wasser/Photovoltaik",
 "target": "Stromnetz",
 "value": "299.9955673"
 },
@@ -226,7 +226,7 @@
 "nodes": [
 {
 "color": "#0096aa",
-"name": "Umwandler Wasser/Fotovoltaik"
+"name": "Umwandler Wasser/Photovoltaik"
 },
 {
 "color": "#0096aa",
