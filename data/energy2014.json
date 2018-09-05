@@ -142,13 +142,13 @@
    "color": "#45515d", 
    "source": "Diesel", 
    "target": "Verkehr", 
-   "value": "412.8"
+   "value": "373.994309"
   },  
   {
    "color": "#fedfc4", 
    "source": "Benzin", 
    "target": "Verkehr", 
-   "value": "321.8"
+   "value": "393.917677"
   },  
   {
    "color": "#0788a3", 
