@@ -76,7 +76,7 @@
 "color": "#0788a3",
 "source": "Stromnetz",
 "target": "Nichtwohnen",
-"value": "884.355403"
+"value": "880.1"
 },
 {
 "color": "#9fd175",
@@ -167,6 +167,12 @@
 "source": "Gasnetz",
 "target": "Wohnen",
 "value": "217.577159508438"
+},
+{
+"color": "#b05d75",
+"source": "Fernwärmenetz",
+"target": "Export",
+"value": "19.6"
 },
 {
 "color": "#fefa83",
