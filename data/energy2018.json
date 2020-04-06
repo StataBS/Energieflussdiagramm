@@ -16,13 +16,13 @@
 "color": "#b05d75",
 "source": "Fernwärmenetz",
 "target": "Verluste Fernwärme",
-"value": "19.58"
+"value": "173.306099"
 },
 {
 "color": "#b05d75",
 "source": "Fernwärmenetz",
 "target": "Nichtwohnen",
-"value": "501.4194191"
+"value": "482.84041913785"
 },
 {
 "color": "#b05d75",
@@ -76,7 +76,7 @@
 "color": "#0788a3",
 "source": "Stromnetz",
 "target": "Nichtwohnen",
-"value": "880.1"
+"value": "884.355403"
 },
 {
 "color": "#9fd175",
@@ -167,12 +167,6 @@
 "source": "Gasnetz",
 "target": "Wohnen",
 "value": "217.577159508438"
-},
-{
-"color": "#b05d75",
-"source": "Fernwärmenetz",
-"target": "Export",
-"value": "19.6"
 },
 {
 "color": "#fefa83",
