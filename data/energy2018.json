@@ -10,7 +10,7 @@
 "color": "#b05d75",
 "source": "Umwandler Thermisch",
 "target": "Fernwärmenetz",
-"value": "1117.397572"
+"value": "1156.928572"
 },
 {
 "color": "#b05d75",
@@ -22,13 +22,13 @@
 "color": "#b05d75",
 "source": "Fernwärmenetz",
 "target": "Nichtwohnen",
-"value": "482.84041913785"
+"value": "493.4070911"
 },
 {
 "color": "#b05d75",
 "source": "Fernwärmenetz",
 "target": "Wohnen",
-"value": "459.515736320572"
+"value": "475.982110872415"
 },
 {
 "color": "#0788a3",
@@ -191,6 +191,12 @@
 "source": "Umwandler Wasser/Photovoltaik",
 "target": "Stromnetz",
 "value": "273.824603"
+},
+{
+"color": "#b05d75",
+"source": "Fernwärmenetz",
+"target": "Export",
+"value": "18.579"
 }
 ],
 "nodes": [
@@ -273,6 +279,14 @@
 {
 "color": "#0788a3",
 "name": "Verluste Strom"
+},
+{
+"color": "#b05d75",
+"name": ""
+},
+{
+"color": "#7A7A7A",
+"name": "Export"
 }
 ]
 }
