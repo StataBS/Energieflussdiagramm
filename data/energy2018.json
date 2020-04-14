@@ -197,48 +197,30 @@
 "source": "Fernwärmenetz",
 "target": "Export FW",
 "value": "18.579"
+},
+{
+"color": "#b05d75",
+"source": "Elektrizität",
+"target": "Umwandler Thermisch",
+"value": "4.209148"
 }
 ],
 "nodes": [
 {
 "color": "#0096aa",
-"name": "Umwandler Wasser/Photovoltaik"
-},
-{
-"color": "#0096aa",
 "name": "Wasserkraft"
 },
 {
-"color": "#fedfc4",
-"name": "Sonne"
-},
-{
-"color": "#b05d75",
-"name": "Fernwärmenetz"
-},
-{
-"color": "#b05d75",
-"name": "Verluste Fernwärme"
-},
-{
-"color": "#0788a3",
-"name": "Stromnetz"
-},
-{
-"color": "#9ba076",
-"name": "Nichtwohnen"
-},
-{
-"color": "#9ba076",
-"name": "Wohnen"
-},
-{
-"color": "#9ba076",
-"name": "Verkehr"
+"color": "#7A7A7A",
+"name": "Import FW"
 },
 {
 "color": "#e588a3",
 "name": "Umweltwärme"
+},
+{
+"color": "#fedfc4",
+"name": "Sonne"
 },
 {
 "color": "#9fd175",
@@ -277,16 +259,40 @@
 "name": "Gasnetz"
 },
 {
+"color": "#0096aa",
+"name": "Umwandler Wasser/Photovoltaik"
+},
+{
+"color": "#b05d75",
+"name": "Fernwärmenetz"
+},
+{
 "color": "#0788a3",
-"name": "Verluste Strom"
+"name": "Stromnetz"
+},
+{
+"color": "#b05d75",
+"name": "Verluste Fernwärme"
 },
 {
 "color": "#7A7A7A",
 "name": "Export FW"
 },
 {
-"color": "#7A7A7A",
-"name": "Import FW"
+"color": "#9ba076",
+"name": "Nichtwohnen"
+},
+{
+"color": "#9ba076",
+"name": "Wohnen"
+},
+{
+"color": "#9ba076",
+"name": "Verkehr"
+},
+{
+"color": "#0788a3",
+"name": "Verluste Strom"
 }
 ]
 }
