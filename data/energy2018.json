@@ -200,9 +200,15 @@
 },
 {
 "color": "#b05d75",
-"source": "Elektrizität",
-"target": "Umwandler Thermisch",
-"value": "4.209148"
+"source": "Fernwärme Import",
+"target": "Fernwärmenetz",
+"value": "4.345729"
+},
+{
+"color": "#0788a3",
+"source": "Stromnetz",
+"target": "Verkehr",
+"value": "20.749"
 }
 ],
 "nodes": [
