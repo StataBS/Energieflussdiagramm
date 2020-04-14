@@ -22,7 +22,7 @@
 "color": "#b05d75",
 "source": "Fernwärmenetz",
 "target": "Nichtwohnen",
-"value": "493.4070911"
+"value": "482.717797564531"
 },
 {
 "color": "#b05d75",
@@ -195,7 +195,7 @@
 {
 "color": "#b05d75",
 "source": "Fernwärmenetz",
-"target": "Export",
+"target": "Export FW",
 "value": "18.579"
 }
 ],
@@ -281,12 +281,12 @@
 "name": "Verluste Strom"
 },
 {
-"color": "#b05d75",
-"name": ""
+"color": "#7A7A7A",
+"name": "Export FW"
 },
 {
 "color": "#7A7A7A",
-"name": "Export"
+"name": "Import FW"
 }
 ]
 }
