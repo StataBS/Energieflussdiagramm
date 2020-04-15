@@ -199,6 +199,12 @@
 "value": "18.579"
 },
 {
+"color": "#b05d75",
+"source": "Import FW",
+"target": "Fernwärmenetz",
+"value": "4.345729"
+},
+{
 "color": "#0788a3",
 "source": "Elektrizität",
 "target": "Umwandler Thermisch",
@@ -209,12 +215,6 @@
 "source": "Stromnetz",
 "target": "Verkehr",
 "value": "20.749"
-},
-{
-"color": "#b05d75",
-"source": "Import FW",
-"target": "Fernwärmenetz",
-"value": "4.345729"
 }
 ],
 "nodes": [
@@ -227,12 +227,12 @@
 "name": "Import FW"
 },
 {
-"color": "#e588a3",
-"name": "Umweltwärme"
-},
-{
 "color": "#fedfc4",
 "name": "Sonne"
+},
+{
+"color": "#e588a3",
+"name": "Umweltwärme"
 },
 {
 "color": "#9fd175",
@@ -251,16 +251,16 @@
 "name": "Heizöl"
 },
 {
+"color": "#0788a3",
+"name": "Elektrizität"
+},
+{
 "color": "#45515d",
 "name": "Diesel"
 },
 {
 "color": "#fedfc4",
 "name": "Benzin"
-},
-{
-"color": "#0788a3",
-"name": "Elektrizität"
 },
 {
 "color": "#0096aa",
