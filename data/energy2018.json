@@ -257,16 +257,16 @@
 "name": "Elektrizität"
 },
 {
-"color": "#a74b59",
-"name": "Umwandler Thermisch"
+"color": "#0096aa",
+"name": "Umwandler Wasser/Photovoltaik"
 },
 {
 "color": "#fefa83",
 "name": "Gasnetz"
 },
 {
-"color": "#0096aa",
-"name": "Umwandler Wasser/Photovoltaik"
+"color": "#a74b59",
+"name": "Umwandler Thermisch"
 },
 {
 "color": "#b05d75",
