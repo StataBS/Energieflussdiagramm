@@ -199,12 +199,6 @@
 "value": "18.579"
 },
 {
-"color": "#b05d75",
-"source": "Import FW",
-"target": "Fernwärmenetz",
-"value": "4.345729"
-},
-{
 "color": "#0788a3",
 "source": "Elektrizität",
 "target": "Umwandler Thermisch",
@@ -215,6 +209,12 @@
 "source": "Stromnetz",
 "target": "Verkehr",
 "value": "20.749"
+},
+{
+"color": "#b05d75",
+"source": "Import FW",
+"target": "Fernwärmenetz",
+"value": "4.345729"
 }
 ],
 "nodes": [
