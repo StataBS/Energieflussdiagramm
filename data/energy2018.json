@@ -206,6 +206,12 @@
 },
 {
 "color": "#0788a3",
+"source": "Elektrizität",
+"target": "Umwandler Thermisch",
+"value": "4.209148"
+},
+{
+"color": "#0788a3",
 "source": "Stromnetz",
 "target": "Verkehr",
 "value": "20.749"
