@@ -15,7 +15,7 @@
 {
 "color": "#b05d75",
 "source": "Fernwärmenetz",
-"target": "Verluste Fernwärme",
+"target": "Verluste",
 "value": "173.306099"
 },
 {
@@ -183,7 +183,7 @@
 {
 "color": "#0788a3",
 "source": "Stromnetz",
-"target": "Verluste Strom",
+"target": "Verluste",
 "value": "40.6"
 },
 {
@@ -195,7 +195,7 @@
 {
 "color": "#b05d75",
 "source": "Fernwärmenetz",
-"target": "Export FW",
+"target": "Exporte",
 "value": "18.579"
 },
 {
@@ -288,7 +288,7 @@
 },
 {
 "color": "#b05d75",
-"name": "Export FW"
+"name": "Exporte"
 },
 {
 "color": "#9ba076",
@@ -303,8 +303,8 @@
 "name": "Verkehr"
 },
 {
-"color": "#0788a3",
-"name": "Verluste Strom"
+"color": "#9ba076",
+"name": "Verluste"
 }
 ]
 }
