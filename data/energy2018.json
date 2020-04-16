@@ -219,12 +219,12 @@
 ],
 "nodes": [
 {
-"color": "#0096aa",
-"name": "Wasserkraft"
+"color": "#666666",
+"name": "Fernwärme (Import)"
 },
 {
-"color": "#b05d75",
-"name": "Import FW"
+"color": "#0096aa",
+"name": "Wasserkraft"
 },
 {
 "color": "#fedfc4",
