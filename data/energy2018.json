@@ -283,11 +283,11 @@
 "name": "Stromnetz"
 },
 {
-"color": "#b05d75",
-"name": "Verluste Fernwärme"
+"color": "#9ba076",
+"name": "Verluste"
 },
 {
-"color": "#b05d75",
+"color": "#9ba076",
 "name": "Exporte"
 },
 {
@@ -301,10 +301,6 @@
 {
 "color": "#9ba076",
 "name": "Verkehr"
-},
-{
-"color": "#9ba076",
-"name": "Verluste"
 }
 ]
 }
