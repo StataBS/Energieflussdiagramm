@@ -7,10 +7,46 @@
 "value": "251.1643"
 },
 {
+"color": "#b05d75",
+"source": "Umwandler Thermisch",
+"target": "Fernwärmenetz",
+"value": "1156.928572"
+},
+{
+"color": "#b05d75",
+"source": "Fernwärmenetz",
+"target": "Verluste Fernwärme",
+"value": "173.306099"
+},
+{
+"color": "#b05d75",
+"source": "Fernwärmenetz",
+"target": "Nichtwohnen",
+"value": "482.717797564531"
+},
+{
+"color": "#b05d75",
+"source": "Fernwärmenetz",
+"target": "Wohnen",
+"value": "475.982110872415"
+},
+{
 "color": "#0788a3",
 "source": "Umwandler Thermisch",
 "target": "Stromnetz",
-"value": "-251.1643"
+"value": "157.610165"
+},
+{
+"color": "#fedfc4",
+"source": "Sonne",
+"target": "Umwandler Wasser/Photovoltaik",
+"value": "22.660303"
+},
+{
+"color": "#e588a3",
+"source": "Umweltwärme",
+"target": "Umwandler Thermisch",
+"value": "23.721093"
 },
 {
 "color": "#e588a3",
@@ -25,10 +61,160 @@
 "value": "8.286899"
 },
 {
+"color": "#fedfc4",
+"source": "Sonne",
+"target": "Nichtwohnen",
+"value": "2.28063811"
+},
+{
+"color": "#fedfc4",
+"source": "Sonne",
+"target": "Wohnen",
+"value": "17.78495753"
+},
+{
+"color": "#0788a3",
+"source": "Stromnetz",
+"target": "Nichtwohnen",
+"value": "837.0373584"
+},
+{
+"color": "#9fd175",
+"source": "Holz",
+"target": "Umwandler Thermisch",
+"value": "177.82531322"
+},
+{
+"color": "#9fd175",
+"source": "Holz",
+"target": "Nichtwohnen",
+"value": "5.88006396713822"
+},
+{
+"color": "#9fd175",
+"source": "Holz",
+"target": "Wohnen",
+"value": "14.7907500228618"
+},
+{
+"color": "#b18d74",
+"source": "Abfall",
+"target": "Umwandler Thermisch",
+"value": "761.15109144"
+},
+{
+"color": "#b18d74",
+"source": "Abfall",
+"target": "Nichtwohnen",
+"value": "71.50651076"
+},
+{
+"color": "#fefa83",
+"source": "Erdgas",
+"target": "Gasnetz",
+"value": "1336.413626"
+},
+{
+"color": "#fb9a1d",
+"source": "Heizöl",
+"target": "Umwandler Thermisch",
+"value": "57.322184"
+},
+{
+"color": "#fb9a1d",
+"source": "Heizöl",
+"target": "Nichtwohnen",
+"value": "66.0053987098522"
+},
+{
+"color": "#fb9a1d",
+"source": "Heizöl",
+"target": "Wohnen",
+"value": "149.695764400148"
+},
+{
+"color": "#45515d",
+"source": "Diesel",
+"target": "Verkehr",
+"value": "398.445491"
+},
+{
+"color": "#fedfc4",
+"source": "Benzin",
+"target": "Verkehr",
+"value": "358.504373"
+},
+{
+"color": "#0788a3",
+"source": "Elektrizität",
+"target": "Stromnetz",
+"value": "912.029764"
+},
+{
+"color": "#fefa83",
+"source": "Gasnetz",
+"target": "Umwandler Thermisch",
+"value": "744.740043"
+},
+{
+"color": "#fefa83",
+"source": "Gasnetz",
+"target": "Nichtwohnen",
+"value": "385.84175284685"
+},
+{
+"color": "#fefa83",
+"source": "Gasnetz",
+"target": "Wohnen",
+"value": "182.60393315315"
+},
+{
+"color": "#fefa83",
+"source": "Gasnetz",
+"target": "Verkehr",
+"value": "23.227897"
+},
+{
+"color": "#0788a3",
+"source": "Stromnetz",
+"target": "Wohnen",
+"value": "411.7690256"
+},
+{
+"color": "#0788a3",
+"source": "Stromnetz",
+"target": "Verluste Strom",
+"value": "40.6"
+},
+{
 "color": "#0788a3",
 "source": "Umwandler Wasser/Photovoltaik",
 "target": "Stromnetz",
-"value": "251.1643"
+"value": "273.824603"
+},
+{
+"color": "#b05d75",
+"source": "Fernwärmenetz",
+"target": "Export FW",
+"value": "18.579"
+},
+{
+"color": "#b05d75",
+"source": "Import FW",
+"target": "Fernwärmenetz",
+"value": "4.345729"
+},
+{
+"color": "#0788a3",
+"source": "Elektrizität",
+"target": "Umwandler Thermisch",
+"value": "4.209148"
+},
+{
+"color": "#0788a3",
+"source": "Stromnetz",
+"target": "Verkehr",
+"value": "49.849"
 }
 ],
 "nodes": [
