@@ -9,7 +9,7 @@
 "use strict";
 var units = "GWh";
 
-var year=2016;
+var year=2018;
 
 var margin = {top: 5, right: 40, bottom: 5, left: 40},
     width = 951 - margin.left - margin.right,
