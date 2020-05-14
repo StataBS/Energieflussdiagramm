@@ -201,44 +201,20 @@
 ],
 "nodes": [
 {
-"color": "#0096aa",
-"name": "Umwandler Wasser/Fotovoltaik"
+"color": "#b05d75",
+"name": "Fernwärme (Import)"
 },
 {
 "color": "#0096aa",
 "name": "Wasserkraft"
 },
 {
-"color": "#b05d75",
-"name": "Fernwärmenetz"
-},
-{
-"color": "#b05d75",
-"name": "Verluste Fernwärme"
-},
-{
-"color": "#0788a3",
-"name": "Stromnetz"
-},
-{
-"color": "#7A7A7A",
-"name": "Nichtwohnen"
-},
-{
-"color": "#7A7A7A",
-"name": "Wohnen"
-},
-{
-"color": "#7A7A7A",
-"name": "Verkehr"
+"color": "#fedfc4",
+"name": "Sonne"
 },
 {
 "color": "#e588a3",
 "name": "Umweltwärme"
-},
-{
-"color": "#fedfc4",
-"name": "Sonne"
 },
 {
 "color": "#9fd175",
@@ -257,6 +233,10 @@
 "name": "Heizöl"
 },
 {
+"color": "#0788a3",
+"name": "Elektrizität"
+},
+{
 "color": "#45515d",
 "name": "Diesel"
 },
@@ -265,20 +245,44 @@
 "name": "Benzin"
 },
 {
-"color": "#0788a3",
-"name": "Elektrizität"
-},
-{
-"color": "#a74b59",
-"name": "Umwandler Thermisch"
+"color": "#0096aa",
+"name": "Umwandler Wasser/Photovoltaik"
 },
 {
 "color": "#fefa83",
 "name": "Gasnetz"
 },
 {
+"color": "#a74b59",
+"name": "Umwandler Thermisch"
+},
+{
+"color": "#b05d75",
+"name": "Fernwärmenetz"
+},
+{
 "color": "#0788a3",
-"name": "Verluste Strom"
+"name": "Stromnetz"
+},
+{
+"color": "#7A7A7A",
+"name": "Verluste"
+},
+{
+"color": "#7A7A7A",
+"name": "Exporte"
+},
+{
+"color": "#7A7A7A",
+"name": "Nichtwohnen"
+},
+{
+"color": "#7A7A7A",
+"name": "Wohnen"
+},
+{
+"color": "#7A7A7A",
+"name": "Verkehr"
 }
 ]
 }
