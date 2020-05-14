@@ -22,7 +22,7 @@
 "color": "#b05d75",
 "source": "Fernwärmenetz",
 "target": "Nichtwohnen",
-"value": "482.717797564531"
+"value": "493.4"
 },
 {
 "color": "#b05d75",
@@ -142,7 +142,7 @@
 "color": "#fedfc4",
 "source": "Benzin",
 "target": "Verkehr",
-"value": "358.504373"
+"value": "359.4"
 },
 {
 "color": "#0788a3",
@@ -154,19 +154,19 @@
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Umwandler Thermisch",
-"value": "744.740043"
+"value": "643.81081978"
 },
 {
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Nichtwohnen",
-"value": "385.84175284685"
+"value": "453.172776770444"
 },
 {
 "color": "#fefa83",
 "source": "Gasnetz",
 "target": "Wohnen",
-"value": "182.60393315315"
+"value": "216.202132449556"
 },
 {
 "color": "#fefa83",
@@ -283,23 +283,23 @@
 "name": "Stromnetz"
 },
 {
-"color": "#9ba076",
+"color": "#7A7A7A",
 "name": "Verluste"
 },
 {
-"color": "#9ba076",
+"color": "#7A7A7A",
 "name": "Exporte"
 },
 {
-"color": "#9ba076",
+"color": "#7A7A7A",
 "name": "Nichtwohnen"
 },
 {
-"color": "#9ba076",
+"color": "#7A7A7A",
 "name": "Wohnen"
 },
 {
-"color": "#9ba076",
+"color": "#7A7A7A",
 "name": "Verkehr"
 }
 ]
