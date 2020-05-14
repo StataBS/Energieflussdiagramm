@@ -257,16 +257,16 @@
 "name": "Heizöl"
 },
 {
+"color": "#0788a3",
+"name": "Elektrizität"
+},  
+{
 "color": "#45515d",
 "name": "Diesel"
 },
 {
 "color": "#fedfc4",
 "name": "Benzin"
-},
-{
-"color": "#0788a3",
-"name": "Elektrizität"
 },
 {
 "color": "#a74b59",
